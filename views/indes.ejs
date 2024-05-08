@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events List</title>
+</head>
+<body>
+    <h1>Events</h1>
+    <a href="/events/new">Add New Event</a>
+    <ul>
+        <% events.forEach(event => { %>
+            <li><%= event.title %> - 
+            <%= event.date.toDateString() %> at <%= event.location %></li>
+        <% }); %>
+    </ul>
+</body>
+</html>
