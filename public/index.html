@@ -5,25 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kristianstad Events</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
         <div class="header-content">
-            <div class="logo">My City<br>Visit Kristianstad</div>
+            <div class="icon">
+                <img src="event-planning.png" alt="Icon" class="logo-icon">
+                My City<br>Visit Kristianstad
+            </div>
             <nav>
                 <ul>
-                    <li>See & Do</li>
-                    <li>Eat & Drink</li>
-                    <li>Kristianstad Recommend</li>
-                    <li>Events</li>
-                    <li>Travel Information</li>
+                    <li><a href="#">See & Do</a></li>
+                    <li><a href="#">Eat & Drink</a></li>
+                    <li><a href="#">Kristianstad Recommend</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Travel Information</a></li>
                 </ul>
             </nav>
             <form class="search-form">
-                <input type="search" placeholder="Search Events...">
-                <button type="submit">Search</button>
+                <input type="search" placeholder="Search">
+                <button type="submit"><i class="fa fa-search"></i></button>
             </form>
-            <div class="my-list">My List</div>
+            <div class="my-list">
+                <button type="button"><img src="check.png" alt="Check" class="my-list-icon"></button>
+            </div>
         </div>
     </header>
     <main>

@@ -1,7 +1,21 @@
+/* Importing Font Awesome for icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* General body and text styling */
 body, h1, h2, button {
     font-family: Arial, sans-serif; 
 }
 
+html, body {
+    height: auto; /* Allows content height to control the scrolling */
+    min-height: 100%; /* Ensures it covers at least the viewport height */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    overflow-y: auto; /* Allows vertical scrolling */
+}
+
+/* Header and logo styling */
 header {
     background-color: #000;
     color: #fff;
@@ -28,10 +42,8 @@ header {
     height: 30px; 
     width: auto; 
 }
-body {
-    font-family: Arial, sans-serif;
-}
 
+/* Navigation styling */
 nav ul {
     list-style: none; 
     display: flex; 
@@ -39,24 +51,27 @@ nav ul {
     padding-left: 0;
     margin: 0; 
 }
+
 nav li {
     padding: 10px;
-    flex-grow: 1;
+    flex-grow: 1; /* Allows each item to grow */
     text-align: center;
 }
 
 nav ul li {
     position: relative; 
 }
+
 @media (max-width: 600px) {
     nav ul {
-        flex-direction: column; 
+        flex-direction: column; /* Stacks the navigation items under each other on small screens */
     }
 
     nav li {
-        text-align: left;
+        text-align: left; /* Aligns text to the left on small screens */
     }
 }
+
 nav a {
     text-decoration: none;
     color: white; 
@@ -78,12 +93,13 @@ nav a::after {
     height: 2px;
     background-color: #ff0000;
     transition: width 0.3s;
+}
 
 nav a:hover::after, nav a:focus::after {
     width: 100%;
 }
 
-
+/* Event sections styling */
 .events, .popular-events {
     background-color: #333;
     color: #fff;
@@ -99,13 +115,12 @@ nav a:hover::after, nav a:focus::after {
     margin: 5px;
     cursor: pointer;
 }
+
 .filters button:hover {
-    background-color: rgb(255, 59, 59);  
-    border-color: #999;
+    background-color: rgb(255, 59, 59);
     transform: scale(1.05);
     transition: all 0.3s ease-in-out;
 }
-
 
 .event-name {
     display: inline-block;
@@ -113,6 +128,8 @@ nav a:hover::after, nav a:focus::after {
     margin: 10px;
     padding: 10px 20px;
 }
+
+/* Search form styling */
 .search-form {
     display: flex;
     align-items: center;
@@ -148,11 +165,6 @@ nav a:hover::after, nav a:focus::after {
     color: red; 
 }
 
-
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
-
-
-
 .my-list button {
     background-color: #000; 
     border: none; 
@@ -172,6 +184,4 @@ nav a:hover::after, nav a:focus::after {
 
 .my-list button:hover img.my-list-icon {
     filter: brightness(0) saturate(100%) invert(13%) sepia(97%) saturate(3437%) hue-rotate(356deg) brightness(97%) contrast(106%); /* Red color effect on hover */
-}
-
 }
