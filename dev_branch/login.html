@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristianstad Events - Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/globals.css">
+    <link rel="icon" href="resources/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="video-background">
+        <video id="background-video" autoplay loop muted>
+            <source src="resources/concert_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="login-container">
+        <img src="resources/logo.png" alt="Logo" class="login-logo">
+        <div class="welcome-text">Welcome to Kristianstad Events</div>
+        <div class="login-form">
+            <h2>Login</h2>
+            <div class="input-container">
+                <i class="fa fa-user icon"></i>
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="input-container">
+                <i class="fa fa-key icon"></i>
+                <input type="password" placeholder="Password" required>
+            </div>
+            <a href="signup.html" class="button-link">
+                <button type="button">Login</button>
+            </a>
+            <a href="signup.html" class="signup-link">Sign Up</a>
+            <p>Forgot password? <a href="#" class="forgot-password-link">Click here</a></p>
+        </div>
+    </div>
+</body>
+</html>
