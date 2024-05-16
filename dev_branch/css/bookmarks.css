@@ -1,34 +1,35 @@
-.container {
-    display: flex;
-    padding-top: 60px;
-}
-
+/* Container styling for the events */
 .events-container {
     width: 87%;
     padding: 20px;
-    margin-left: 16%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 70px;
 }
 
+/* Styling for the title */
 .events-title {
-    display: block;
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 20px;
     font-weight: bold;
     color: black;
     text-decoration: none;
 }
 
+/* Styling for the event columns */
 .events-column {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
 }
 
+/* Styling for individual events */
 .event {
     background-color: #fff;
     margin: 10px;
     padding: 10px;
-    width: calc(33.333% - 20px);
+    width: calc(25% - 20px); /* 4 columns layout */
     box-sizing: border-box;
     text-align: center;
     transition: transform 0.3s;
@@ -58,20 +59,4 @@
 
 .event:hover {
     transform: scale(1.05);
-}
-
-.view-more-link {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-}
-
-.view-more-link:hover {
-    color: #be8181;
-    text-decoration: underline;
-    cursor: pointer;
 }
