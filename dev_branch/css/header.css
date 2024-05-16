@@ -1,32 +1,34 @@
-/* Header and logo styling */
 header {
     background-color: #000;
     color: #fff;
     padding: 5px 0;
-    position: sticky; /* Make the header sticky */
-    top: 0; /* Stick to the top of the viewport */
-    z-index: 1000; /* Ensure it stays above other content */
+    position: fixed; /* Change from sticky to fixed */
+    top: 0;
+    width: 100%; /* Ensure the header spans the full width of the viewport */
+    z-index: 1000;
+    overflow-y: auto;
 }
 
 .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px; 
+    max-width: 100%;
     margin: 0 auto;
 }
 
 .icon {
-    display: flex; 
+    display: flex;
     align-items: center;
-    font-size: 24px; 
-    white-space: nowrap; 
+    font-size: 24px;
+    white-space: nowrap;
     cursor: pointer;
+    margin-left: 10px; /* Ensure the logo is 10px from the left */
 }
 
 .logo-icon {
-    height: 30px; 
-    width: auto; 
+    height: 30px;
+    width: auto;
     margin-right: 0px; /* Adjust to bring text closer to image */
 }
 
@@ -40,11 +42,11 @@ header {
 
 /* Navigation styling */
 nav ul {
-    list-style: none; 
-    display: flex; 
-    justify-content: space-around; 
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
     padding-left: 0;
-    margin: 0; 
+    margin: 0;
 }
 
 nav li {
@@ -54,7 +56,7 @@ nav li {
 }
 
 nav ul li {
-    position: relative; 
+    position: relative;
 }
 
 @media (max-width: 600px) {
@@ -69,23 +71,23 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-    color: white; 
-    font-size: 16px; 
-    padding: 10px; 
-    display: block; 
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    display: block;
 }
 
 nav a:hover, nav a:focus {
     color: #be8181;
-    outline: none; 
+    outline: none;
 }
 
 nav a::after {
-    content: ''; 
-    position: absolute; 
+    content: '';
+    position: absolute;
     bottom: 0;
-    left: 0; 
-    width: 0; 
+    left: 0;
+    width: 0;
     height: 2px;
     background-color: #be8181;
     transition: width 0.3s;
@@ -95,15 +97,14 @@ nav a:hover::after, nav a:focus::after {
     width: 100%;
 }
 
-
 .search-form input[type="search"] {
     border: none;
     background-color: transparent;
     color: white;
     padding-left: 10px;
-    font-size: 16px; 
-    outline: none; 
-    width: 100%; 
+    font-size: 16px;
+    outline: none;
+    width: 100%;
 }
 
 .search-form button {
@@ -112,15 +113,15 @@ nav a:hover::after, nav a:focus::after {
     color: white;
     cursor: pointer;
     padding: 0 10px;
-    font-size: 16px; 
+    font-size: 16px;
 }
 
 .search-form button i {
-    font-size: 20px; 
+    font-size: 20px;
 }
 
 .search-form button:hover {
-    color: #be8181; 
+    color: #be8181;
 }
 
 /* Styling for the search form cancel (X) button */
@@ -137,7 +138,7 @@ nav a:hover::after, nav a:focus::after {
 .search-form {
     display: flex;
     align-items: center;
-    background-color: #000; 
+    background-color: #000;
     border-radius: 5px;
     padding: 5px;
     border: 1px solid gray; /* Add thin gray outline */
@@ -145,7 +146,7 @@ nav a:hover::after, nav a:focus::after {
 
 /* Profile section styling */
 .my-profile {
-    margin-left: 40px;
+    margin-right: 40px;
     display: flex;
     align-items: center;
 }
@@ -162,17 +163,17 @@ nav a:hover::after, nav a:focus::after {
 }
 
 .my-profile button {
-    background-color: #000; 
+    background-color: #000;
     border: none;
-    cursor: pointer; 
+    cursor: pointer;
     position: relative; /* Ensure the pseudo-element is positioned correctly */
 }
 
 .my-profile img.profile-icon {
-    height: 30px; 
-    width: auto; 
+    height: 30px;
+    width: auto;
     border-radius: 50%; /* Make the image circular */
-    transition: filter 0.3s; 
+    transition: filter 0.3s;
 }
 
 .my-profile button::after {

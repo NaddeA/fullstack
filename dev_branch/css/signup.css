@@ -26,17 +26,16 @@
     z-index: -1; /* Ensure it stays above the video but below other content */
 }
 
-/* Style for the login container */
-.login-container {
+/* Style for the signup container */
+.signup-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Align children vertically */
-    min-height: 100vh;
-    padding: 50px 20px; 
+    flex-direction: column; 
+    padding: 70px 20px; 
 }
 
-.login-logo {
+.signup-logo {
     width: 100px;
     height: auto;
     margin-bottom: 20px;
@@ -51,18 +50,16 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.login-form {
-    background-color: rgba(255, 255, 255, 0.944);
-    padding: 20px; /* Reduced padding for a cleaner look */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.signup-form {
+    background-color: rgba(255, 255, 255, 0.979);
+    padding: 20px; 
     text-align: center;
     width: 100%;
-    max-width: 400px; /* Restrict the width of the form */
+    max-width: 400px; 
     margin-bottom: 50px;
 }
 
-.login-form h2 {
+.signup-form h2 {
     margin-bottom: 20px;
     font-size: 24px;
 }
@@ -81,9 +78,9 @@
     color: #aaa;
 }
 
-.login-form input[type="text"],
-.login-form input[type="email"],
-.login-form input[type="password"] {
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
     width: 100%;
     padding: 10px 10px 10px 40px; /* Add padding to make space for the icon */
     margin: 0;
@@ -96,15 +93,15 @@
     font-size: 16px;
 }
 
-.login-form input[type="text"]::placeholder,
-.login-form input[type="email"]::placeholder,
-.login-form input[type="password"]::placeholder {
+.signup-form input[type="text"]::placeholder,
+.signup-form input[type="email"]::placeholder,
+.signup-form input[type="password"]::placeholder {
     color: #aaa;
 }
 
-.login-form input[type="text"]:focus,
-.login-form input[type="email"]:focus,
-.login-form input[type="password"]:focus {
+.signup-form input[type="text"]:focus,
+.signup-form input[type="email"]:focus,
+.signup-form input[type="password"]:focus {
     outline: none;
     border-bottom: 1px solid #000;
 }
@@ -131,14 +128,15 @@
     background-color: #333;
 }
 
-.signup-link {
+.login-link {
     margin-left: 5px; /* Add margin to separate the text */
     color: #000;
+    font-weight: bold;
     text-decoration: none;
     font-size: 14px;
 }
 
-.signup-link:hover {
+.login-link:hover {
     text-decoration: underline;
 }
 

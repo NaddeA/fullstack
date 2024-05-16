@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristianstad Events</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/globals.css">
+    <link rel="stylesheet" href="css/filter_column.css">
+    <link rel="stylesheet" href="css/all_events.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="resources/logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="icon">
+                <img src="resources/logo.png" alt="Icon" class="logo-icon">
+                <span id="logo-word">ristianstad Events</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">All Events</a></li>
+                    <li><a href="#">My Events</a></li>
+                    <li><a href="#">Bookmarks</a></li>
+                </ul>
+            </nav>
+            <form class="search-form">
+                <input type="search" placeholder="Search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <div class="my-profile">
+                <a href="login.html" class="profile-link">My Profile</a>
+                <a href="login.html" class="profile-link">
+                    <button type="button">
+                        <img src="resources/profile_img.png" alt="Profile" class="profile-icon">
+                    </button>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="filter-column">
+                <h2>Filters</h2>
+                <form>
+                    <div class="filter-section">
+                        <h3>Month</h3>
+                        <input type="month" id="month" name="month">
+                    </div>
+                    <div class="filter-section">
+                        <h3>Category</h3>
+                        <label><input type="checkbox" name="category" value="sport"> Sport</label>
+                        <label><input type="checkbox" name="category" value="music"> Music</label>
+                        <label><input type="checkbox" name="category" value="film"> Film</label>
+                        <label><input type="checkbox" name="category" value="business"> Business</label>
+                        <label><input type="checkbox" name="category" value="education"> Education</label>
+                        <label><input type="checkbox" name="category" value="social"> Social Gathering</label>
+                    </div>
+                    <div class="filter-section">
+                        <h3>Age Restriction</h3>
+                        <label><input type="checkbox" name="age" value="family-friendly"> Family Friendly (0+)</label>
+                        <label><input type="checkbox" name="age" value="not-family-friendly"> Not Family Friendly (17+)</label>
+                    </div>
+                    <div class="filter-section">
+                        <h3>Sort by</h3>
+                        <label><input type="radio" name="sort" value="date-asc"> Date (Ascending)</label>
+                        <label><input type="radio" name="sort" value="date-desc"> Date (Descending)</label>
+                        <label><input type="radio" name="sort" value="price-asc"> Price (Ascending)</label>
+                        <label><input type="radio" name="sort" value="price-desc"> Price (Descending)</label>
+                    </div>
+                </form>
+            </section>
+            <div class="events-container">
+                <h1 class="events-title">All Events</h1>
+                <section class="events-column">
+                    <article class="event">
+                        <img src="resources/basketball.jpg" alt="Basketball Event">
+                        <h3>Basketball Championship</h3>
+                        <p><i class="fa fa-calendar"></i> 15 May 2024</p>
+                        <p><i class="fa fa-map-marker"></i> Kristianstad Arena</p>
+                    </article>
+                    <article class="event">
+                        <img src="resources/concert.jpg" alt="Music Concert">
+                        <h3>Summer Music Festival</h3>
+                        <p><i class="fa fa-calendar"></i> 20 June 2024</p>
+                        <p><i class="fa fa-map-marker"></i> Central Park</p>
+                    </article>
+                    <article class="event">
+                        <img src="resources/popcorn.jpg" alt="Film Screening">
+                        <h3>Outdoor Film Night</h3>
+                        <p><i class="fa fa-calendar"></i> 5 July 2024</p>
+                        <p><i class="fa fa-map-marker"></i> Riverside Park</p>
+                    </article>
+                
+                    <article class="event">
+                        <img src="resources/basketball.jpg" alt="Basketball Event">
+                        <h3>Basketball Championship</h3>
+                        <p><i class="fa fa-calendar"></i> 15 May 2024</p>
+                        <p><i class="fa fa-map-marker"></i> Kristianstad Arena</p>
+                    </article>
+                    <article class="event">
+                        <img src="resources/concert.jpg" alt="Music Concert">
+                        <h3>Summer Music Festival</h3>
+                        <p><i class="fa fa-calendar"></i> 20 June 2024</p>
+                        <p><i class="fa fa-map-marker"></i> Central Park</p>
+                    </article>
+                    <article class="event">
+                        <img src="resources/popcorn.jpg" alt="Film Screening">
+                        <h3>Outdoor Film Night</h3>
+                        <p><i class="fa fa-calendar"></i> 5 July 2024</p>
+                        <p><i class="fa fa-map-marker"></i> Riverside Park</p>
+                    </article>
+                    
+                    <article class="event">
+                        <img src="resources/basketball.jpg" alt="Basketball Event">
+                        <h3>Basketball Championship</h3>
+                        <p><i class="fa fa-calendar"></i> 15 May 2024</p>
+                        <p><i class="fa fa-map-marker"></i> Kristianstad Arena</p>
+                    </article>
+                    <article class="event">
+                        <img src="resources/concert.jpg" alt="Music Concert">
+                        <h3>Summer Music Festival</h3>
+                        <p><i class="fa fa-calendar"></i> 20 June 2024</p>
+                        <p><i class="fa fa-map-marker"></i> Central Park</p>
+                    </article>
+                    <article class="event">
+                        <img src="resources/popcorn.jpg" alt="Film Screening">
+                        <h3>Outdoor Film Night</h3>
+                        <p><i class="fa fa-calendar"></i> 5 July 2024</p>
+                        <p><i class="fa fa-map-marker"></i> Riverside Park</p>
+                    </article>
+                </section>
+                <a href="#" class="view-more-link">View More</a>
+               
+            </div>
+        </div>
+    </main>
+</body>
+</html>

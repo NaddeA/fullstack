@@ -1,9 +1,10 @@
 /* Importing Font Awesome for icons */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 /* General body and text styling */
 body, h1, h2, button {
-    font-family: Arial, sans-serif; 
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
 }
 
 h1 {
@@ -18,7 +19,6 @@ html, body {
     overflow-x: hidden; /* Prevents horizontal scrolling */
     overflow-y: auto; /* Allows vertical scrolling */
 }
-
 
 /* Event sections styling */
 .events, .popular-events {
@@ -49,7 +49,6 @@ html, body {
     margin: 10px;
     padding: 10px 20px;
 }
-
 
 /* Global button styling */
 button {
