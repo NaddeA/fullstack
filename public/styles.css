@@ -1,21 +1,21 @@
-/* Importing Font Awesome for icons */
+
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
-/* General body and text styling */
+
 body, h1, h2, button {
     font-family: Arial, sans-serif; 
 }
 
 html, body {
-    height: auto; /* Allows content height to control the scrolling */
-    min-height: 100%; /* Ensures it covers at least the viewport height */
+    height: auto; 
+    min-height: 100%; 
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevents horizontal scrolling */
-    overflow-y: auto; /* Allows vertical scrolling */
+    overflow-x: hidden; 
+    overflow-y: auto; 
 }
 
-/* Header and logo styling */
+
 header {
     background-color: #000;
     color: #fff;
@@ -24,10 +24,9 @@ header {
 
 .header-content {
     display: flex;
-    align-items: center;
+    align-items: center; 
     justify-content: space-between;
-    max-width: 1200px; 
-    margin: 0 auto;
+    padding: 0 10px; 
 }
 
 .icon {
@@ -43,7 +42,7 @@ header {
     width: auto; 
 }
 
-/* Navigation styling */
+
 nav ul {
     list-style: none; 
     display: flex; 
@@ -54,7 +53,7 @@ nav ul {
 
 nav li {
     padding: 10px;
-    flex-grow: 1; /* Allows each item to grow */
+    flex-grow: 1; 
     text-align: center;
 }
 
@@ -64,11 +63,11 @@ nav ul li {
 
 @media (max-width: 600px) {
     nav ul {
-        flex-direction: column; /* Stacks the navigation items under each other on small screens */
+        flex-direction: column;
     }
 
     nav li {
-        text-align: left; /* Aligns text to the left on small screens */
+        text-align: left; 
     }
 }
 
@@ -99,7 +98,7 @@ nav a:hover::after, nav a:focus::after {
     width: 100%;
 }
 
-/* Event sections styling */
+
 .events, .popular-events {
     background-color: #333;
     color: #fff;
@@ -129,7 +128,8 @@ nav a:hover::after, nav a:focus::after {
     padding: 10px 20px;
 }
 
-/* Search form styling */
+
+
 .search-form {
     display: flex;
     align-items: center;
@@ -164,7 +164,10 @@ nav a:hover::after, nav a:focus::after {
 .search-form button:hover {
     color: red; 
 }
-
+.nav, .search-form, .auth-buttons {
+    display: flex;
+    align-items: center;
+}
 .my-list button {
     background-color: #000; 
     border: none; 
@@ -184,4 +187,86 @@ nav a:hover::after, nav a:focus::after {
 
 .my-list button:hover img.my-list-icon {
     filter: brightness(0) saturate(100%) invert(13%) sepia(97%) saturate(3437%) hue-rotate(356deg) brightness(97%) contrast(106%); /* Red color effect on hover */
+}
+
+
+button {
+    color: #fff; 
+    background-color: #333; 
+    border: 2px solid #555; 
+    padding: 8px 16px; 
+    font-size: 16px; 
+    cursor: pointer;
+    border-radius: 5px; 
+    transition: background-color 0.3s, border-color 0.3s; 
+}
+
+
+button:hover {
+    background-color: #555; 
+    border-color: #777; 
+}
+
+
+button:focus {
+    outline: none;
+    border-color: #ff0000; 
+    box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.5); 
+}
+
+
+.login-form form, .signup-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: #000;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.login-form input, .signup-form input {
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 8px;
+    border-radius: 4px;
+    width: 150px;
+}
+
+.login-form button, .signup-form button {
+    padding: 8px 16px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-form button:hover, .signup-form button:hover {
+    background-color: #e60000;
+}
+
+.auth-button {
+    padding: 5px 10px; 
+    font-size: 14px; 
+    margin-right: 5px; 
+    border-radius: 3px; 
+}
+
+.auth-button {
+    background-color: #444; 
+    color: #ccc; 
+    border: 1px solid #555; 
+}
+
+.auth-button:hover {
+    background-color: #555; 
+    color: #fff; 
+}
+@media (max-width: 600px) {
+    .auth-button {
+        padding: 8px 15px; 
+        font-size: 16px; 
+    }
 }
