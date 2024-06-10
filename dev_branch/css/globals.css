@@ -54,3 +54,10 @@ html, body {
 button {
     cursor: pointer;
 }
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+    transform: none; 
+    transition: none;
+}
