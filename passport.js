@@ -1,15 +1,38 @@
-
-//We import using require instead of the CommonJS module(easier to use in my opinion)
-const passport = require('passport');
-// Imports Local Strategy from the passport-local package. 
-//This is used for username and password login.
 const LocalStrategy = require('passport-local').Strategy;
-//import the file userModal.js
-const userCred = require('./usermodel'); 
-//uses an instance of LocalStrategy to authenticate users.
-passport.use(new LocalStrategy(userCred.authenticate()));
-passport.serializeUser(userCred.serializeUser());
-passport.deserializeUser(userCred.deserializeUser());
+const bcrypt = require('bcryptjs');
+const User = require('../models/usermodel');
 
-//exports the passport object so it can be used in our app.js file.
-module.exports = passport;
+module.exports = function(passport) {
+    passport.use(
+        new LocalStrategy({ usernameField: 'email' }, (email, password, done) => {
+            // Match user
+            User.findOne({
+                email: email
+            }).then(user => {
+                if (!user) {
+                    return done(null, false, { message: 'That email is not registered' });
+                }
+
+                // Match password
+                bcrypt.compare(password, user.password, (err, isMatch) => {
+                    if (err) throw err;
+                    if (isMatch) {
+                        return done(null, user);
+                    } else {
+                        return done(null, false, { message: 'Password incorrect' });
+                    }
+                });
+            });
+        })
+    );
+
+    passport.serializeUser((user, done) => {
+        done(null, user.id);
+    });
+
+    passport.deserializeUser((id, done) => {
+        User.findById(id, function(err, user) {
+            done(err, user);
+        });
+    });
+};
